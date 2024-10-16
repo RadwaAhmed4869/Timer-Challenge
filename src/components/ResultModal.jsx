@@ -19,7 +19,7 @@ const ResultModal = forwardRef(function ResultModal(
   });
 
   return (
-    <dialog ref={dialog} className="result-modal">
+    <dialog ref={dialog} onClose={onReset} className="result-modal">
       {userLost && <h2>You lost!</h2>}
       {!userLost && <h2>Your score: {score}</h2>}
       <p>
